@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<symbol version="7" name="MUX_2to1">
+    <symboltype>BLOCK</symboltype>
+    <timestamp>2018-4-10T8:10:27</timestamp>
+    <attr value="MUX_2to1" name="VeriModel" />
+    <graph>
+        <rect width="256" x="64" y="0" height="0" />
+        <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="192" y="-8" type="symbol" />
+    </graph>
+</symbol>
