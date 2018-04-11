@@ -1,0 +1,103 @@
+$date
+	Wed Apr 11 13:29:11 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module Test_FullAdder $end
+$var wire 1 ! sum $end
+$var wire 1 " carry $end
+$var reg 3 # in [2:0] $end
+$scope module uut $end
+$var wire 3 $ in [2:0] $end
+$var wire 1 % sum0 $end
+$var wire 1 ! sum $end
+$var wire 1 & carry1 $end
+$var wire 1 ' carry0 $end
+$var wire 1 " carry $end
+$scope module SA0 $end
+$var wire 1 ( in0 $end
+$var wire 1 ) in1 $end
+$var wire 1 % sum $end
+$var wire 1 ' carry $end
+$upscope $end
+$scope module SA1 $end
+$var wire 1 * in0 $end
+$var wire 1 % in1 $end
+$var wire 1 ! sum $end
+$var wire 1 & carry $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0*
+0)
+0(
+0'
+0&
+0%
+b0 $
+b0 #
+0"
+0!
+$end
+#1
+1!
+1%
+1(
+b1 #
+b1 $
+#2
+0(
+0"
+0'
+1)
+b10 #
+b10 $
+#3
+0!
+0%
+1"
+1'
+1(
+b11 #
+b11 $
+#4
+1!
+0(
+0"
+0'
+0)
+1*
+b100 #
+b100 $
+#5
+0!
+1"
+1&
+1%
+1(
+b101 #
+b101 $
+#6
+0(
+1"
+0'
+1)
+b110 #
+b110 $
+#7
+1!
+0&
+0%
+1"
+1'
+1(
+b111 #
+b111 $
+#8
