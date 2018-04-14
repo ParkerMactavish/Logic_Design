@@ -1,2 +1,0 @@
-vhdtdtfi -lib work C:/Users/10310/Desktop/Logic_Design/Report4/Lab4/mux_2to1.v -lang verilog -prj Lab4 -o MUX_2to1.spl -module MUX_2to1 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
-spl2sym -intstyle ise -family spartan6 MUX_2to1.spl C:/Users/10310/Desktop/Logic_Design/Report4/Lab4/MUX_2to1.sym 
