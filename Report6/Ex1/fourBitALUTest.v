@@ -5,7 +5,7 @@ module fourBitALUTest;
 	
 	wire[3:0]out;
 	
-	fourBitALU ALU0(.in0(in0), .in1(in1), .sel(sel), .out(out));
+	fourBitALU ALU0(.inA(in0), .inB(in1), .sel(sel), .out(out));
 	
 	initial begin
 		in0=4'b1100;
