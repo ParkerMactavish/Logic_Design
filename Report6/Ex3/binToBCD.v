@@ -5,7 +5,7 @@ module binToBCD(in, outA, outB);
 	reg[3:0]outA, outB;
 	
 	always@(*)begin
-		if(in>'d9)begin
+		if(in>4'b1001)begin
 			outA=1;
 			outB=in-'d10;
 		end

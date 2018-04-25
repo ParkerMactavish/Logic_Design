@@ -1,5 +1,5 @@
 module fiveBitALU(inA, inB, sel, out);
-	input [3:0]inA, inB;
+	input [4:0]inA, inB;
 	input [2:0]sel;
 	
 	output[4:0]out;
@@ -16,15 +16,15 @@ module fiveBitALU(inA, inB, sel, out);
 	
 	always@(*)begin
 		case(sel)
-			ADD:out={1'b0, inA}+{1'b0, inB};
-			SUB:out={1'b0, inA}-{1'b0, inB};
-			AND:out={1'b0, inA}&{1'b0, inB};
-			OR :out={1'b0, inA}|{1'b0, inB};
-			XOR:out={1'b0, inA}^{1'b0, inB};
-			SHR:out={1'b0, inA}>>{1'b0, inB};
-			SHL:out={1'b0, inA}<<{1'b0, inB};
-			CMP:out={1'b0, inA}>{1'b0, inB};
+			ADD:out=inA+inB;
+			SUB:out=inA-inB;
+			AND:out=inA&inB;
+			OR :out=inA|inB;
+			XOR:out=inA^inB;
+			SHR:out=inA>>inB;
+			SHL:out=inA<<inB;
+			CMP:out=inA>inB;
 			default:out=5'b0;
 		endcase
 	end	
-endmodule;
+endmodule

@@ -4,7 +4,7 @@ module fourBitBCD(in, out);
 	output[6:0]out;
 	reg[6:0]out;
 	
-	always@(in)begin
+	always@(*)begin
 		case(in)
 			4'b0000:out=7'b0111111;
 			4'b0001:out=7'b0000110;
@@ -21,7 +21,8 @@ module fourBitBCD(in, out);
 			4'b1100:out=7'b0111001;
 			4'b1101:out=7'b1011110;
 			4'b1110:out=7'b1110001;
-			4'b1111:out=7'b0000000;			
+			4'b1111:out=7'b0000000;
+			default:out=7'b0000000;
 		endcase		
 	end	
 endmodule

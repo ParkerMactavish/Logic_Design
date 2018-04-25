@@ -7,15 +7,15 @@ module system(clk, inA, inB, sel, SevenSegA, SevenSegB, SevenSegOne, SevenSegTen
 	output[6:0]SevenSegA, SevenSegB, SevenSegOne, SevenSegTen;
 	output signal;
 	
-	wire [4:0]ALUOut0, BCDOutA, BCDOutB;
-	wire [3:0]absValOut0;
+	wire [4:0]ALUOut0;
+	wire [3:0]absValOut0, BCDOutA, BCDOutB;
 	
 	fourBitBCD SS0(.in(inA[3:0]), .out(SevenSegA));
 	fourBitBCD SS1(.in(inB[3:0]), .out(SevenSegB));
 	
 	fiveBitALU ALU0(.inA(inA), .inB(inB), .sel(sel), .out(ALUOut0));
 	
-	absVal ABS0(.in(ALUOut), .out(absValOut0));
+	absVal ABS0(.in(ALUOut0), .out(absValOut0));
 	
 	assign signal=ALUOut0[4];
 	

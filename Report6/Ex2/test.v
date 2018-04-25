@@ -7,9 +7,7 @@ module test;
 	
 	integer i, j;
 	
-	fourBitFullAdder FA0(.inA(inA), .inB(inB), .out(adderOut));
-	
-	fourBitBCD BCD0(.in(adderOut), .out(out));
+	system SYS0(.inA(inA), .inB(inB), .out(out));
 	
 	initial begin
 		for(i=0; i<8; i=i+1)begin

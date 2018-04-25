@@ -1,11 +1,12 @@
 module fourBitALUTest;
 	reg [3:0]in0, in1;
 	reg [2:0]sel;
-	reg [4:0]i;
+	
+	integer i;
 	
 	wire[3:0]out;
 	
-	fourBitALU ALU0(.inA(in0), .inB(in1), .sel(sel), .out(out));
+	system ALU0(.sel(sel), .inA(in0), .inB(in1), .out(out));
 	
 	initial begin
 		in0=4'b1100;
