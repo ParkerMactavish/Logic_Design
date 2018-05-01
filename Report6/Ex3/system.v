@@ -21,7 +21,7 @@ module system(clk, inA, inB, sel, SevenSegA, SevenSegB, SevenSegOne, SevenSegTen
 	
 	binToBCD BTB0(.in(absValOut0), .outA(BCDOutA), .outB(BCDOutB));
 	
-	fourBitBCD SS2(.in(BCDOutA), .out(SevenSegA));
-	fourBitBCD SS3(.in(BCDOutB), .out(SevenSegB));
+	fourBitBCD SS2(.in(BCDOutA), .out(SevenSegOne));
+	fourBitBCD SS3(.in(BCDOutB), .out(SevenSegTen));
 
 endmodule
