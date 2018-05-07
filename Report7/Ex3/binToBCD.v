@@ -3,8 +3,8 @@ module binToBCD(in, outOne, outTen);
 	output reg [3:0]outTen, outOne;
 	
 	always@(*)begin
-		outTen<=in/10;
-		outOne<=in%10;
+		outTen<=in/4'd10;
+		outOne<=in%4'd10;
 	end
 
 endmodule

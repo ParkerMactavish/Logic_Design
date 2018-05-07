@@ -8,7 +8,7 @@ module system(clk, rst, set, minSet, secSet, minTen, minOne, secTen, secOne);
 	wire[5:0] min, sec;
 	wire[3:0] minTenBin, minOneBin, secTenBin, secOneBin;
 	
-	freqDevider(.clk(clk), .rst(rst), .dclk(dclk));
+	freqDevider FD(.clk(clk), .rst(rst), .dclk(dclk));
 	
 	timer T0(.clk(dclk), .rst(rst), .minSet(minSet), .secSet(secSet), .set(set), .min(min), .sec(sec));
 	binToBCD BTBMin(.in(min), .outOne(minOneBin), .outTen(minTenBin));

@@ -5,22 +5,23 @@ module timer(clk, rst, minSet, secSet, set, min, sec);
 	output reg [5:0]min, sec;
 	
 	always@(posedge clk or posedge rst or posedge set)begin
-		if(rst) {min, sec}<=12'b0;
+		if(rst) begin min<=6'b0; sec<=6'b0;end
 		
 		else if(set) begin
-			if(minSet<6'd60&&secSet<6'd60) {min, sec}<={minSet, secSet};
-			else if(minSet<6'd60) {min, sec}<={minSet, (secSet-6'd60)};
-			else if(secSet<6'd60) {min, sec}<={(minSet-6'd60), secSet};
-			else {min, sec}<={(minSet-6'd60), (secSet-6'd60)};
+			if(minSet<6'd60&&secSet<6'd60)begin min<=minSet;sec<=secSet;end
+			else if(minSet<6'd60)begin min<=minSet;sec<=secSet-6'd60;end
+			else if(secSet<6'd60)begin min<=(minSet-6'd60); sec<=secSet;end
+			else begin min<=minSet-6'd60; sec<=secSet-6'd60;end
 		end
 		
 		else begin
 			if(sec==6'd59) begin
-				if(min!=6'd59) {min, sec}<={(min+6'd1), 6'd0};
-				else {min, sec}<=12'd0;
+				if(min!=6'd59) begin min<=min+6'd1; sec<=6'd0; end
+				else begin min<=6'b0; sec<=6'b0;end
 			end
 			
-			else {min, sec}<={min, (sec+6'd1)};
+			else begin min<=min; sec<=sec+6'd1;end
+			
 		end
 	end
 	

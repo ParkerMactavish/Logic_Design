@@ -1,7 +1,7 @@
 module counter(clk, rst, out);
 	input clk, rst;
 	
-	output reg [3:0]out=4'd0;
+	output reg [3:0]out;
 	
 	always@(posedge clk, posedge rst)begin
 		if(rst) out<=4'd0;
