@@ -7,20 +7,20 @@ module LEDMatrix(clk, rst, sel, pattern, row, col);
 	always@(posedge clk or posedge rst)begin
 		if(rst) row<=8'b00000001;
 		else if(row==8'b10000000) row<=8'b00000001;
-		else row=row<<1'b1;
+		else row<=row<<1'b1;
 	end
 	
 	always@(*)begin
-		if(pattern==1'b0)begin
+		if(pattern)begin
 			case(row)
-				8'b00000001:col=8'b00111000;
-				8'b00000010:col=8'b00111000;
-				8'b00000100:col=8'b10010000;
-				8'b00001000:col=8'b01111110;
-				8'b00010000:col=8'b00010000;
-				8'b00100000:col=8'b00110100;
-				8'b01000000:col=8'b01001000;
-				8'b10000000:col=8'b10000000;
+				8'b00000001:col=8'b00011100;
+				8'b00000010:col=8'b00011100;
+				8'b00000100:col=8'b00001000;
+				8'b00001000:col=8'b00111110;
+				8'b00010000:col=8'b00101010;
+				8'b00100000:col=8'b00001000;
+				8'b01000000:col=8'b00010100;
+				8'b10000000:col=8'b00100010;
 			endcase
 		end
 		else begin

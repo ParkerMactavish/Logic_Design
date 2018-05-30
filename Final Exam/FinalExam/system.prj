@@ -1,0 +1,8 @@
+verilog work "../trafficLightCounter.v"
+verilog work "../trafficLight.v"
+verilog work "../sevenSeg.v"
+verilog work "../matrixCounter.v"
+verilog work "../LEDMatrix.v"
+verilog work "../freqDevider1000.v"
+verilog work "../freqDevider1.v"
+verilog work "../system.v"

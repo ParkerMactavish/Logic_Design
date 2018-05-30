@@ -12,8 +12,8 @@ module trafficLight(clk, rst, rstType, count, lightOut, patternOut);
 				redOut   	=3'd4,
 				green    	=2'd0,
 				yellow   	=2'd1,
-				red      	=2'd2;
-				walkMan		=1'b0;
+				red      	=2'd2,
+				walkMan		=1'b0,
 				stopMan		=1'b1;
 	
 	//combinatorial component to determine the next state
@@ -22,6 +22,7 @@ module trafficLight(clk, rst, rstType, count, lightOut, patternOut);
 			green:	stateNext=(count==3'd2)?yellow:green;
 			yellow:	stateNext=(count==3'd1)?red:yellow;
 			red:	stateNext=(count==3'd1)?green:red;
+			default: stateNext=(rstType==1'b0)?red:green;
 		endcase
 	end
 	

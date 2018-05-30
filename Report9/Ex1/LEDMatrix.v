@@ -6,7 +6,7 @@ module LEDMatrix(clk, rst, row, col);
 	always@(posedge clk or posedge rst)begin
 		if(rst) row<=8'b00000001;
 		else if(row==8'b10000000) row<=8'b00000001;
-		else row=row<<1'b1;
+		else row<=row<<1'b1;
 	end
 	
 	always@(*)begin

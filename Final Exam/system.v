@@ -5,7 +5,9 @@ module system(clk, rst, LEDOut0, LEDOut1, sevenSegOut0, sevenSegOut1, matrixRow0
 	output	[6:0]sevenSegOut0, sevenSegOut1;
 	output	[7:0]matrixRow0, matrixCol0, matrixRow1, matrixCol1;
 	
-	wire dclk1, dclk1000, pattern0, pattern1, count0, count1, sel0, sel1;
+	wire dclk1, dclk1000, pattern0, pattern1;
+	wire[2:0] count0, count1;
+	wire[1:0] sel0, sel1;
 	
 	freqDevider1 FD1(.clk(clk), .rst(rst), .dclk(dclk1));
 	

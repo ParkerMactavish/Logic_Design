@@ -1,0 +1,852 @@
+Release 14.2 - xst P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.22 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.22 secs
+ 
+--> Reading design: system.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "system.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "system"
+Output Format                      : NGC
+Target Device                      : xc6slx25-3-ftg256
+
+---- Source Options
+Top Module Name                    : system
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\eelogic\Desktop\Logic_Design-master\Final Exam\trafficLightCounter.v" into library work
+Parsing module <trafficLightCounter>.
+Analyzing Verilog file "C:\Users\eelogic\Desktop\Logic_Design-master\Final Exam\trafficLight.v" into library work
+Parsing module <trafficLight>.
+Analyzing Verilog file "C:\Users\eelogic\Desktop\Logic_Design-master\Final Exam\sevenSeg.v" into library work
+Parsing module <sevenSeg>.
+Analyzing Verilog file "C:\Users\eelogic\Desktop\Logic_Design-master\Final Exam\matrixCounter.v" into library work
+Parsing module <matrixCounter>.
+Analyzing Verilog file "C:\Users\eelogic\Desktop\Logic_Design-master\Final Exam\LEDMatrix.v" into library work
+Parsing module <LEDMatrix>.
+Analyzing Verilog file "C:\Users\eelogic\Desktop\Logic_Design-master\Final Exam\freqDevider1000.v" into library work
+Parsing module <freqDevider1000>.
+Analyzing Verilog file "C:\Users\eelogic\Desktop\Logic_Design-master\Final Exam\freqDevider1.v" into library work
+Parsing module <freqDevider1>.
+Analyzing Verilog file "C:\Users\eelogic\Desktop\Logic_Design-master\Final Exam\system.v" into library work
+Parsing module <system>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <system>.
+
+Elaborating module <freqDevider1>.
+
+Elaborating module <freqDevider1000>.
+
+Elaborating module <trafficLight>.
+
+Elaborating module <trafficLightCounter>.
+
+Elaborating module <sevenSeg>.
+WARNING:HDLCompiler:189 - "C:\Users\eelogic\Desktop\Logic_Design-master\Final Exam\system.v" Line 24: Size mismatch in connection of port <in>. Formal port size is 4-bit while actual signal size is 3-bit.
+WARNING:HDLCompiler:189 - "C:\Users\eelogic\Desktop\Logic_Design-master\Final Exam\system.v" Line 25: Size mismatch in connection of port <in>. Formal port size is 4-bit while actual signal size is 3-bit.
+
+Elaborating module <matrixCounter>.
+
+Elaborating module <LEDMatrix>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <system>.
+    Related source file is "C:\Users\eelogic\Desktop\Logic_Design-master\Final Exam\system.v".
+    Summary:
+	no macro.
+Unit <system> synthesized.
+
+Synthesizing Unit <freqDevider1>.
+    Related source file is "C:\Users\eelogic\Desktop\Logic_Design-master\Final Exam\freqDevider1.v".
+    Found 25-bit register for signal <count>.
+    Found 1-bit register for signal <dclk>.
+    Found 25-bit adder for signal <count[24]_GND_2_o_add_1_OUT> created at line 19.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  26 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <freqDevider1> synthesized.
+
+Synthesizing Unit <freqDevider1000>.
+    Related source file is "C:\Users\eelogic\Desktop\Logic_Design-master\Final Exam\freqDevider1000.v".
+    Found 25-bit register for signal <count>.
+    Found 1-bit register for signal <dclk>.
+    Found 25-bit adder for signal <count[24]_GND_3_o_add_1_OUT> created at line 19.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  26 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <freqDevider1000> synthesized.
+
+Synthesizing Unit <trafficLight>.
+    Related source file is "C:\Users\eelogic\Desktop\Logic_Design-master\Final Exam\trafficLight.v".
+        greenOut = 3'b001
+        yellowOut = 3'b010
+        redOut = 3'b100
+        green = 2'b00
+        yellow = 2'b01
+        red = 2'b10
+        walkMan = 1'b0
+        stopMan = 1'b1
+    Found 1-bit register for signal <stateNow<1>>.
+    Found 1-bit register for signal <stateNow<0>>.
+    Found 4x4-bit Read Only RAM for signal <_n0039>
+    Found 2-bit 4-to-1 multiplexer for signal <stateNext> created at line 21.
+WARNING:Xst:737 - Found 1-bit latch for signal <lightOut<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <lightOut<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <lightOut<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   2 D-type flip-flop(s).
+	inferred   3 Latch(s).
+	inferred   1 Multiplexer(s).
+Unit <trafficLight> synthesized.
+
+Synthesizing Unit <trafficLightCounter>.
+    Related source file is "C:\Users\eelogic\Desktop\Logic_Design-master\Final Exam\trafficLightCounter.v".
+    Found 3-bit register for signal <count>.
+    Found 3-bit subtractor for signal <count[2]_GND_9_o_sub_2_OUT> created at line 11.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   3 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <trafficLightCounter> synthesized.
+
+Synthesizing Unit <sevenSeg>.
+    Related source file is "C:\Users\eelogic\Desktop\Logic_Design-master\Final Exam\sevenSeg.v".
+    Found 16x7-bit Read Only RAM for signal <out>
+    Summary:
+	inferred   1 RAM(s).
+Unit <sevenSeg> synthesized.
+
+Synthesizing Unit <matrixCounter>.
+    Related source file is "C:\Users\eelogic\Desktop\Logic_Design-master\Final Exam\matrixCounter.v".
+    Found 10-bit register for signal <cnt>.
+    Found 10-bit adder for signal <cnt[9]_GND_12_o_add_1_OUT> created at line 12.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  10 D-type flip-flop(s).
+Unit <matrixCounter> synthesized.
+
+Synthesizing Unit <LEDMatrix>.
+    Related source file is "C:\Users\eelogic\Desktop\Logic_Design-master\Final Exam\LEDMatrix.v".
+    Found 8-bit register for signal <row>.
+    Found 1-bit 4-to-1 multiplexer for signal <sel[1]_row[7]_Mux_69_o> created at line 27.
+    Found 1-bit 4-to-1 multiplexer for signal <sel[1]_row[7]_Mux_117_o> created at line 27.
+    Found 1-bit 4-to-1 multiplexer for signal <sel[1]_row[7]_Mux_129_o> created at line 27.
+WARNING:Xst:737 - Found 1-bit latch for signal <col<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <col<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <col<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <col<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <col<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <col<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <col<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <col<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+	inferred   8 Latch(s).
+	inferred  14 Multiplexer(s).
+Unit <LEDMatrix> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 4
+ 16x7-bit single-port Read Only RAM                    : 2
+ 4x4-bit single-port Read Only RAM                     : 2
+# Adders/Subtractors                                   : 6
+ 10-bit adder                                          : 2
+ 25-bit adder                                          : 2
+ 3-bit subtractor                                      : 2
+# Registers                                            : 14
+ 1-bit register                                        : 6
+ 10-bit register                                       : 2
+ 25-bit register                                       : 2
+ 3-bit register                                        : 2
+ 8-bit register                                        : 2
+# Latches                                              : 22
+ 1-bit latch                                           : 22
+# Multiplexers                                         : 34
+ 1-bit 2-to-1 multiplexer                              : 20
+ 1-bit 4-to-1 multiplexer                              : 6
+ 2-bit 4-to-1 multiplexer                              : 2
+ 25-bit 2-to-1 multiplexer                             : 2
+ 3-bit 2-to-1 multiplexer                              : 2
+ 8-bit 2-to-1 multiplexer                              : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <freqDevider1>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <freqDevider1> synthesized (advanced).
+
+Synthesizing (advanced) Unit <freqDevider1000>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <freqDevider1000> synthesized (advanced).
+
+Synthesizing (advanced) Unit <matrixCounter>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+Unit <matrixCounter> synthesized (advanced).
+
+Synthesizing (advanced) Unit <sevenSeg>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_out> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 7-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <in>            |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <out>           |          |
+    -----------------------------------------------------------------------
+Unit <sevenSeg> synthesized (advanced).
+
+Synthesizing (advanced) Unit <trafficLight>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0039> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 4-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <stateNow>      |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <trafficLight> synthesized (advanced).
+
+Synthesizing (advanced) Unit <trafficLightCounter>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <trafficLightCounter> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 4
+ 16x7-bit single-port distributed Read Only RAM        : 2
+ 4x4-bit single-port distributed Read Only RAM         : 2
+# Counters                                             : 6
+ 10-bit up counter                                     : 2
+ 25-bit up counter                                     : 2
+ 3-bit down counter                                    : 2
+# Registers                                            : 22
+ Flip-Flops                                            : 22
+# Multiplexers                                         : 30
+ 1-bit 2-to-1 multiplexer                              : 20
+ 1-bit 4-to-1 multiplexer                              : 6
+ 2-bit 4-to-1 multiplexer                              : 2
+ 8-bit 2-to-1 multiplexer                              : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1989 - Unit <system>: instances <TLC0>, <TLC1> of unit <trafficLightCounter> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <system>: instances <MC0>, <MC1> of unit <matrixCounter> are equivalent, second instance is removed
+WARNING:Xst:3002 - This design contains one or more registers/latches that are directly
+   incompatible with the Spartan6 architecture. The two primary causes of this is
+   either a register or latch described with both an asynchronous set and
+   asynchronous reset, or a register or latch described with an asynchronous
+   set or reset which however has an initialization value of the opposite 
+   polarity (i.e. asynchronous reset with an initialization value of 1).
+    While this circuit can be built, it creates a sub-optimal implementation
+   in terms of area, power and performance. For a more optimal implementation
+   Xilinx highly recommends one of the following:
+
+          1) Remove either the set or reset from all registers and latches
+             if not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Ensure all registers have the same initialization value as the
+             described asynchronous set or reset polarity
+          4) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Spartan6 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set and reset:
+    stateNow_1 in unit <trafficLight>
+
+
+Optimizing unit <system> ...
+
+Optimizing unit <trafficLight> ...
+
+Optimizing unit <LEDMatrix> ...
+WARNING:Xst:1710 - FF/Latch <col_0> (without init value) has a constant value of 0 in block <LEDMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <col_0> (without init value) has a constant value of 0 in block <LEDMatrix>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <FD1000/count_15> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <FD1000/count_16> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <FD1000/count_17> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <FD1000/count_18> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <FD1000/count_19> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <FD1000/count_20> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <FD1000/count_21> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <FD1000/count_22> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <FD1000/count_23> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <FD1000/count_24> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <LM1/row_0> in Unit <system> is equivalent to the following FF/Latch, which will be removed : <LM0/row_0> 
+INFO:Xst:2261 - The FF/Latch <LM1/row_1> in Unit <system> is equivalent to the following FF/Latch, which will be removed : <LM0/row_1> 
+INFO:Xst:2261 - The FF/Latch <LM1/row_2> in Unit <system> is equivalent to the following FF/Latch, which will be removed : <LM0/row_2> 
+INFO:Xst:2261 - The FF/Latch <LM1/row_3> in Unit <system> is equivalent to the following FF/Latch, which will be removed : <LM0/row_3> 
+INFO:Xst:2261 - The FF/Latch <LM1/row_4> in Unit <system> is equivalent to the following FF/Latch, which will be removed : <LM0/row_4> 
+INFO:Xst:2261 - The FF/Latch <LM1/row_5> in Unit <system> is equivalent to the following FF/Latch, which will be removed : <LM0/row_5> 
+INFO:Xst:2261 - The FF/Latch <LM1/row_6> in Unit <system> is equivalent to the following FF/Latch, which will be removed : <LM0/row_6> 
+INFO:Xst:2261 - The FF/Latch <LM1/row_7> in Unit <system> is equivalent to the following FF/Latch, which will be removed : <LM0/row_7> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block system, actual ratio is 1.
+Latch TL0/lightOut_2 has been replicated 1 time(s) to handle iob=true attribute.
+Latch TL1/lightOut_2 has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 67
+ Flip-Flops                                            : 67
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : system.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 257
+#      GND                         : 1
+#      INV                         : 3
+#      LUT1                        : 47
+#      LUT2                        : 26
+#      LUT3                        : 9
+#      LUT4                        : 4
+#      LUT5                        : 21
+#      LUT6                        : 48
+#      MUXCY                       : 47
+#      VCC                         : 1
+#      XORCY                       : 50
+# FlipFlops/Latches                : 89
+#      FDC                         : 63
+#      FDP                         : 4
+#      LD                          : 22
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 53
+#      IBUF                        : 1
+#      OBUF                        : 52
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx25ftg256-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              83  out of  30064     0%  
+ Number of Slice LUTs:                  158  out of  15032     1%  
+    Number used as Logic:               158  out of  15032     1%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    163
+   Number with an unused Flip Flop:      80  out of    163    49%  
+   Number with an unused LUT:             5  out of    163     3%  
+   Number of fully used LUT-FF pairs:    78  out of    163    47%  
+   Number of unique control sets:         6
+
+IO Utilization: 
+ Number of IOs:                          54
+ Number of bonded IOBs:                  54  out of    186    29%  
+    IOB Flip Flops/Latches:               6
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-------------------------------------+------------------------+-------+
+Clock Signal                         | Clock buffer(FF name)  | Load  |
+-------------------------------------+------------------------+-------+
+clk                                  | BUFGP                  | 42    |
+FD1/dclk                             | NONE(TLC0/count_2)     | 7     |
+FD1000/dclk                          | NONE(MC0/cnt_0)        | 18    |
+TL1/Mram__n00392(TL1/Mram__n003921:O)| NONE(*)(TL1/lightOut_1)| 4     |
+TL0/Mram__n00392(TL0/Mram__n003921:O)| NONE(*)(TL0/lightOut_1)| 4     |
+LM1/_n0069(LM1/out1:O)               | NONE(*)(LM1/col_1)     | 14    |
+-------------------------------------+------------------------+-------+
+(*) These 3 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.810ns (Maximum Frequency: 262.471MHz)
+   Minimum input arrival time before clock: 3.311ns
+   Maximum output required time after clock: 5.025ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 3.810ns (frequency: 262.471MHz)
+  Total number of paths / destination ports: 1337 / 42
+-------------------------------------------------------------------------
+Delay:               3.810ns (Levels of Logic = 3)
+  Source:            FD1000/count_10 (FF)
+  Destination:       FD1000/count_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: FD1000/count_10 to FD1000/count_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.447   0.961  FD1000/count_10 (FD1000/count_10)
+     LUT5:I0->O            1   0.203   0.684  FD1000/count[24]_GND_3_o_equal_1_o<24>1 (FD1000/count[24]_GND_3_o_equal_1_o<24>)
+     LUT6:I4->O           16   0.203   1.005  FD1000/count[24]_GND_3_o_equal_1_o<24>3 (FD1000/count[24]_GND_3_o_equal_1_o)
+     LUT2:I1->O            1   0.205   0.000  FD1000/Mcount_count_eqn_01 (FD1000/Mcount_count_eqn_0)
+     FDC:D                     0.102          FD1000/count_0
+    ----------------------------------------
+    Total                      3.810ns (1.160ns logic, 2.650ns route)
+                                       (30.4% logic, 69.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'FD1/dclk'
+  Clock period: 1.940ns (frequency: 515.437MHz)
+  Total number of paths / destination ports: 28 / 7
+-------------------------------------------------------------------------
+Delay:               1.940ns (Levels of Logic = 1)
+  Source:            TLC0/count_0 (FF)
+  Destination:       TLC0/count_0 (FF)
+  Source Clock:      FD1/dclk rising
+  Destination Clock: FD1/dclk rising
+
+  Data Path: TLC0/count_0 to TLC0/count_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q             14   0.447   1.186  TLC0/count_0 (TLC0/count_0)
+     LUT3:I0->O            1   0.205   0.000  TLC0/Mcount_count_xor<0>11 (TLC0/Mcount_count)
+     FDP:D                     0.102          TLC0/count_0
+    ----------------------------------------
+    Total                      1.940ns (0.754ns logic, 1.186ns route)
+                                       (38.9% logic, 61.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'FD1000/dclk'
+  Clock period: 2.994ns (frequency: 334.029MHz)
+  Total number of paths / destination ports: 70 / 18
+-------------------------------------------------------------------------
+Delay:               2.994ns (Levels of Logic = 2)
+  Source:            LM1/row_2 (FF)
+  Destination:       LM1/row_0 (FF)
+  Source Clock:      FD1000/dclk rising
+  Destination Clock: FD1000/dclk rising
+
+  Data Path: LM1/row_2 to LM1/row_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              9   0.447   1.077  LM1/row_2 (LM1/row_2)
+     LUT4:I0->O            5   0.203   0.962  LM1/row[7]_GND_13_o_Select_70_o<7>11 (LM0/row[7]_GND_13_o_Select_70_o<7>1)
+     LUT5:I1->O            7   0.203   0.000  LM1/row[7]_PWR_13_o_equal_51_o<7>1 (LM1/row[7]_PWR_13_o_equal_51_o)
+     FDP:D                     0.102          LM1/row_0
+    ----------------------------------------
+    Total                      2.994ns (0.955ns logic, 2.039ns route)
+                                       (31.9% logic, 68.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'LM1/_n0069'
+  Clock period: 1.719ns (frequency: 581.649MHz)
+  Total number of paths / destination ports: 14 / 14
+-------------------------------------------------------------------------
+Delay:               1.719ns (Levels of Logic = 1)
+  Source:            LM0/col_7 (LATCH)
+  Destination:       LM0/col_7 (LATCH)
+  Source Clock:      LM1/_n0069 falling
+  Destination Clock: LM1/_n0069 falling
+
+  Data Path: LM0/col_7 to LM0/col_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               2   0.498   0.981  LM0/col_7 (LM0/col_7)
+     LUT6:I0->O            1   0.203   0.000  LM0/Mmux_sel[1]_row[7]_MUX_59_o1 (LM0/sel[1]_row[7]_MUX_59_o)
+     LD:D                      0.037          LM0/col_7
+    ----------------------------------------
+    Total                      1.719ns (0.738ns logic, 0.981ns route)
+                                       (42.9% logic, 57.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 42 / 42
+-------------------------------------------------------------------------
+Offset:              3.311ns (Levels of Logic = 1)
+  Source:            rst (PAD)
+  Destination:       FD1/count_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: rst to FD1/count_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            67   1.222   1.659  rst_IBUF (rst_IBUF)
+     FDC:CLR                   0.430          FD1/count_0
+    ----------------------------------------
+    Total                      3.311ns (1.652ns logic, 1.659ns route)
+                                       (49.9% logic, 50.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'FD1/dclk'
+  Total number of paths / destination ports: 7 / 7
+-------------------------------------------------------------------------
+Offset:              3.311ns (Levels of Logic = 1)
+  Source:            rst (PAD)
+  Destination:       TLC0/count_2 (FF)
+  Destination Clock: FD1/dclk rising
+
+  Data Path: rst to TLC0/count_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            67   1.222   1.659  rst_IBUF (rst_IBUF)
+     FDP:PRE                   0.430          TLC0/count_2
+    ----------------------------------------
+    Total                      3.311ns (1.652ns logic, 1.659ns route)
+                                       (49.9% logic, 50.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'FD1000/dclk'
+  Total number of paths / destination ports: 18 / 18
+-------------------------------------------------------------------------
+Offset:              3.311ns (Levels of Logic = 1)
+  Source:            rst (PAD)
+  Destination:       MC0/cnt_0 (FF)
+  Destination Clock: FD1000/dclk rising
+
+  Data Path: rst to MC0/cnt_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            67   1.222   1.659  rst_IBUF (rst_IBUF)
+     FDC:CLR                   0.430          MC0/cnt_0
+    ----------------------------------------
+    Total                      3.311ns (1.652ns logic, 1.659ns route)
+                                       (49.9% logic, 50.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'TL0/Mram__n00392'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              3.648ns (Levels of Logic = 1)
+  Source:            TL0/lightOut_2_1 (LATCH)
+  Destination:       LEDOut0<2> (PAD)
+  Source Clock:      TL0/Mram__n00392 falling
+
+  Data Path: TL0/lightOut_2_1 to LEDOut0<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.498   0.579  TL0/lightOut_2_1 (TL0/lightOut_2_1)
+     OBUF:I->O                 2.571          LEDOut0_2_OBUF (LEDOut0<2>)
+    ----------------------------------------
+    Total                      3.648ns (3.069ns logic, 0.579ns route)
+                                       (84.1% logic, 15.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'TL1/Mram__n00392'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              3.648ns (Levels of Logic = 1)
+  Source:            TL1/lightOut_2_1 (LATCH)
+  Destination:       LEDOut1<2> (PAD)
+  Source Clock:      TL1/Mram__n00392 falling
+
+  Data Path: TL1/lightOut_2_1 to LEDOut1<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.498   0.579  TL1/lightOut_2_1 (TL1/lightOut_2_1)
+     OBUF:I->O                 2.571          LEDOut1_2_OBUF (LEDOut1<2>)
+    ----------------------------------------
+    Total                      3.648ns (3.069ns logic, 0.579ns route)
+                                       (84.1% logic, 15.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'FD1/dclk'
+  Total number of paths / destination ports: 42 / 14
+-------------------------------------------------------------------------
+Offset:              5.025ns (Levels of Logic = 2)
+  Source:            TLC0/count_1 (FF)
+  Destination:       sevenSegOut0<5> (PAD)
+  Source Clock:      FD1/dclk rising
+
+  Data Path: TLC0/count_1 to sevenSegOut0<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             14   0.447   1.186  TLC0/count_1 (TLC0/count_1)
+     LUT3:I0->O            2   0.205   0.616  sevenSegOut1<2>1 (sevenSegOut1_2_OBUF)
+     OBUF:I->O                 2.571          sevenSegOut0_2_OBUF (sevenSegOut0<2>)
+    ----------------------------------------
+    Total                      5.025ns (3.223ns logic, 1.802ns route)
+                                       (64.1% logic, 35.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'FD1000/dclk'
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Offset:              3.926ns (Levels of Logic = 1)
+  Source:            LM1/row_5 (FF)
+  Destination:       matrixRow0<5> (PAD)
+  Source Clock:      FD1000/dclk rising
+
+  Data Path: LM1/row_5 to matrixRow0<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             12   0.447   0.908  LM1/row_5 (LM1/row_5)
+     OBUF:I->O                 2.571          matrixRow0_5_OBUF (matrixRow0<5>)
+    ----------------------------------------
+    Total                      3.926ns (3.018ns logic, 0.908ns route)
+                                       (76.9% logic, 23.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'LM1/_n0069'
+  Total number of paths / destination ports: 14 / 14
+-------------------------------------------------------------------------
+Offset:              3.685ns (Levels of Logic = 1)
+  Source:            LM0/col_7 (LATCH)
+  Destination:       matrixCol0<7> (PAD)
+  Source Clock:      LM1/_n0069 falling
+
+  Data Path: LM0/col_7 to matrixCol0<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               2   0.498   0.616  LM0/col_7 (LM0/col_7)
+     OBUF:I->O                 2.571          matrixCol0_7_OBUF (matrixCol0<7>)
+    ----------------------------------------
+    Total                      3.685ns (3.069ns logic, 0.616ns route)
+                                       (83.3% logic, 16.7% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock FD1/dclk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+FD1/dclk       |    1.940|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock FD1000/dclk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+FD1000/dclk    |    2.994|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock LM1/_n0069
+----------------+---------+---------+---------+---------+
+                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------+---------+---------+---------+---------+
+FD1000/dclk     |         |         |    7.227|         |
+LM1/_n0069      |         |         |    1.719|         |
+TL0/Mram__n00392|         |         |    2.429|         |
+TL1/Mram__n00392|         |         |    2.429|         |
+----------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock TL0/Mram__n00392
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+FD1/dclk       |         |         |    1.536|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock TL1/Mram__n00392
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+FD1/dclk       |         |         |    1.536|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    3.810|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 13.00 secs
+Total CPU time to Xst completion: 12.89 secs
+ 
+--> 
+
+Total memory usage is 324336 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   28 (   0 filtered)
+Number of infos    :   11 (   0 filtered)
+

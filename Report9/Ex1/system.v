@@ -5,7 +5,7 @@ module system(clk, rst, row, col);
 	
 	wire dclk;
 	
-	//freqDevider FD(.clk(clk), .dclk(dclk));
-	LEDMatrix LM(.clk(clk), .rst(rst), .row(row), .col(col));
+	freqDevider FD(.clk(clk), .dclk(dclk));
+	LEDMatrix LM(.clk(dclk), .rst(rst), .row(row), .col(col));
 	
 endmodule
