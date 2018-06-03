@@ -11,14 +11,14 @@ module test;
 	initial begin
 		rst=1'b1;#1 rst=1'b0;
 		clk=1'd0;
-		for(cnt=0; cnt<32'd150; cnt=cnt+1)begin
+		for(cnt=0; cnt<32'd1100; cnt=cnt+1)begin
 			clk=~clk;
 			#1;
 		end
 	end
 	
 	initial begin
-		$monitor("row:%b, col:%b", row, col);
+		$monitor("row:%b, col:%b, cnt:%d", row, col, cnt);
 	end
 	
 	initial begin
